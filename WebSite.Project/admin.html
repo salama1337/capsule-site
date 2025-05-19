@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة التحكم - في Capsule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="admin.css">
+  <script type="module" src="admin.js" defer></script>
+</head>
+<body>
+  <h1>لوحة التحكم 🔐</h1>
+
+  <div id="login-section">
+    <h2>تسجيل الدخول</h2>
+    <input type="email" id="email" placeholder="الإيميل">
+    <input type="password" id="password" placeholder="كلمة السر">
+    <button id="login-btn">دخول</button>
+    <p id="login-error" class="error"></p>
+  </div>
+
+  <div id="upload-section" style="display: none;">
+    <h2>رفع ملف</h2>
+    <select id="subject">
+      <option value="math2">Math 2</option>
+      <option value="it">IT</option>
+      <option value="electronics">Electronics</option>
+      <option value="structured">Structured Programming</option>
+      <option value="report">Technical Report Writing</option>
+      <option value="marketing">Marketing and Sales</option>
+      <option value="communication">Communication Skills</option>
+    </select>
+
+    <select id="category">
+      <option value="lectures">محاضرات</option>
+      <option value="summaries">ملخصات</option>
+      <option value="sections">سكاشن</option>
+      <option value="exams">امتحانات</option>
+    </select>
+
+    <input type="file" id="file-input">
+    <button id="upload-btn">رفع</button>
+    <p id="upload-msg" class="msg"></p>
+  </div>
+
+  <script type="module" src="./firebase-config.js"></script>
+</body>
+</html>
